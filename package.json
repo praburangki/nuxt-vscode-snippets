@@ -1,20 +1,32 @@
 {
-    "name": "nuxt-vscode-snippets",
-    "displayName": "nuxt-vscode-snippets",
-    "description": "All in one snippet for nuxt projects",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.61.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "vue",
-                "path": "./snippets/snippets.code-snippets"
-            }
-        ]
-    }
+	"name": "nuxt-snippets",
+	"displayName": "Nuxt VSCode Snippets",
+	"description": "Snippets for vue/nuxt projects",
+	"icon": "images/logo.png",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.61.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/praburangki/nuxt-vscode-snippets.git"
+	},
+	"keywords": [
+		"Vue",
+		"Vue 3",
+		"Nuxt",
+		"Vue Snippets",
+		"Nuxt Snippets"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			}
+		]
+	}
 }
