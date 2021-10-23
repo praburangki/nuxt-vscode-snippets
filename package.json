@@ -1,0 +1,20 @@
+{
+    "name": "nuxt-snippets",
+    "displayName": "nuxt snippets",
+    "description": "Snippets for nuxt related projects",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
