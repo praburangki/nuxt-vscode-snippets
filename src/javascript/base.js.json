@@ -1,0 +1,91 @@
+{
+  "exportNamedVariable": {
+    "prefix": "env",
+    "body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+    "description": "Export named variable in ES6 syntax"
+  },
+
+  "function": {
+    "prefix": "fun",
+		"body": [
+			"${1|async ,\u200B|}function ${2:name}(${3:params}:${4:type}) {",
+			"\t$0",
+			"}"
+		],
+    "description": "Creates a function"
+  },
+
+	"function:export": {
+    "prefix": "fun:export",
+		"body": [
+			"export function ${1:name}(${2:params}:${3:type}) {",
+			"\t$0",
+			"}"
+		],
+    "description": "Export named function in ES6 syntax"
+  },
+
+	"iife": {
+		"prefix": "iife",
+		"body": [
+			"(${1|\u200B,async |}() => {",
+			"\t$0",
+			"})()"
+		],
+    "description": "Immediately Invoked Function Expression"
+	},
+
+	"variables:const": {
+		"prefix": "cons",
+		"body": [
+			"const ${1:name} = ${2:value}"
+		],
+    "description": "Define a const variable"
+	},
+
+	"variables:const:type": {
+		"prefix": "cons:type",
+		"body": [
+			"const ${1:name}:${2:type} = ${3:value}"
+		],
+    "description": "Define a const variable with types"
+	},
+
+	"variables:let:type": {
+		"prefix": "let:type",
+		"body": [
+			"let ${1:name}:${2:type} = ${3:value}"
+		],
+    "description": "Define a let variable with types"
+	},
+  
+  "destructingObject": {
+    "prefix": "dob",
+    "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+
+  "destructingArray": {
+    "prefix": "dar",
+    "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+
+  "setInterval": {
+    "prefix": "sti",
+    "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+    "description": "Executes the given function at specified intervals in ES6 syntax"
+  },
+
+  "setTimeOut": {
+    "prefix": "sto",
+    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+    "description": "Executes the given function after the specified delay in ES6 syntax"
+  },
+
+  "thenCatch": {
+    "prefix": "thenc",
+    "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+    "description": "Add the .then and .catch methods to handle promises"
+  }
+}

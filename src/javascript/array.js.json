@@ -1,0 +1,21 @@
+{
+  "array:methods": {
+    "prefix": "arr:methods",
+    "body": [
+			"${1:array}.${2|map,filter,find,findIndex,every,some|}((${3:element},${4|\u200B, index|}) => {",
+			"\t$0",
+			"});"
+		],
+    "description": "Array methods"
+  },
+
+	"array:reduce": {
+		"prefix": "arr:reduce",
+    "body": [
+			"${1:array}.reduce((${2:prev}, ${3:current}) => {",
+			"\t$0",
+			"}, ${4:{}});"
+		],
+    "description": "Array reduce method"
+	}
+}
