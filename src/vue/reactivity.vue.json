@@ -1,0 +1,218 @@
+{
+  "Vue composition provide": {
+		"prefix": "v:provide",
+		"body": ["provide(${1:name}, ${2:value});"],
+		"description": "Vue composition provide"
+	},
+
+	"Vue composition inject": {
+		"prefix": "v:inject",
+		"body": [
+			"const ${1:name} = inject(${2:key}${3:, ${4:defaultValue}});"
+		],
+		"description": "Vue composition inject"
+	},
+
+	"Vue composition injection key": {
+		"prefix": "v:inject:key",
+		"body": ["const ${1:varName}: InjectionKey = Symbol(${2:keyName});"],
+		"description": "`InjectionKey` interface which is a generic type that extends Symbol. It can be used to sync the type of the injected value between the provider and the consumer."
+	},
+
+	"Vue composition get current instance": {
+		"prefix": "v:getCurrentInstance",
+		"body": [
+			"const internalInstance = getCurrentInstance();"
+		],
+		"description": "enables access to an internal component instance useful for advanced usages or for library creators.\n"
+	},
+
+	"Vue reactive()": {
+		"prefix": "v:reactive",
+		"body": [
+			"const ${1:name} = reactive<$2>({});"
+		],
+		"description": "Reactivity API - Basic Reactivity APIs.\nReturns a reactive copy of the object.\nThe reactive conversion is \"deep\"—it affects all nested properties. In the ES2015 Proxy (opens new window) based implementation, the returned proxy is not equal to the original object. It is recommended to work exclusively with the reactive proxy and avoid relying on the original object.\n"
+	},
+  
+	"Vue readonly()": {
+		"prefix": "v:readonly",
+		"body": [
+			"const ${1:name} = readonly($2);"
+		],
+		"description": "Reactivity API - Basic Reactivity APIs.\nTakes an object (reactive or plain) or a ref and returns a readonly proxy to the original. A readonly proxy is deep: any nested property accessed will be readonly as well.\n"
+	},
+
+	"Vue isProxy()": {
+		"prefix": "v:isProxy",
+		"body": ["isProxy($1)"],
+		"description": "Reactivity API - Basic Reactivity APIs.\nChecks if an object is a proxy created by `reactive` or `readonly`.\n"
+	},
+
+	"Vue isReactive()": {
+		"prefix": "v:isReactive",
+		"body": ["isReactive($1)"],
+		"description": "Reactivity API - Basic Reactivity APIs.\nChecks if an object is a reactive proxy created by `reactive`.\nIt also returns `true` if the proxy is created by `readonly`, but is wrapping another proxy created by `reactive`.\n"
+	},
+
+	"Vue isReadonly()": {
+		"prefix": "v:isReadonly",
+		"body": ["isReadonly($1)"],
+		"description": "Reactivity API - Basic Reactivity APIs.\nChecks if an object is a readonly proxy created by `readonly`.\n"
+	},
+
+	"Vue toRaw()": {
+		"prefix": "v:toRaw",
+		"body": ["toRaw($1)"],
+		"description": "Reactivity API - Basic Reactivity APIs.\nReturns the raw, original object of a `reactive` or `readonly` proxy. This is an escape hatch that can be used to temporarily read without incurring proxy access/tracking overhead or write without triggering changes. It is not recommended to hold a persistent reference to the original object. Use with caution.\n"
+	},
+
+	"Vue markRaw()": {
+		"prefix": "v:markRaw",
+		"body": ["const raw = markRaw({})"],
+		"description": "Reactivity API - Basic Reactivity APIs.\nMarks an object so that it will never be converted to a proxy. Returns the object itself.\n"
+	},
+
+	"Vue shallowReactive()": {
+		"prefix": "v:shallowReactive",
+		"body": [
+			"const ${1:name} = shallowReactive({$2});"
+		],
+		"description": "Reactivity API - Basic Reactivity APIs.\nCreates a reactive proxy that tracks reactivity of its own properties but does not perform deep reactive conversion of nested objects (exposes raw values).\n"
+	},
+
+	"Vue shallowReadonly()": {
+		"prefix": "v:shallowReadonly",
+		"body": [
+			"const ${1:name} = shallowReadonly({$2});"
+		],
+		"description": "Reactivity API - Basic Reactivity APIs.\nCreates a proxy that makes its own properties readonly, but does not perform deep readonly conversion of nested objects (exposes raw values).\n"
+	},
+
+	"Vue ref()": {
+		"prefix": "v:ref",
+		"body": ["const ${1:name} = ref(${2:value});"],
+		"description": "Reactivity API - Refs.\nTakes an inner value and returns a reactive and mutable ref object. The ref object has a single property `.value` that points to the inner value.\n"
+	},
+
+	"Vue unref()": {
+		"prefix": "v:unref",
+    "body": ["const ${1:name} = unref(${2:value});"],
+		"description": "Reactivity API - Refs.\nReturns the inner value if the argument is a `ref`, otherwise return the argument itself. This is a sugar function for `val = isRef(val) ? val.value : val`.\n"
+	},
+
+
+	"Vue toRef()": {
+		"prefix": "v:toRef",
+		"body": [
+			"const ${1:name} = toRef(${2:source}, '${3:property}');"
+		],
+		"description": "Reactivity API - Refs.\nCan be used to create a `ref` for a property on a source reactive object. The ref can then be passed around, retaining the reactive connection to its source property.\ntoRef is useful when you want to pass the ref of a prop to a composition function.\n`toRef` will return a usable ref even if the source property doesn't currently exist. This makes it especially useful when working with optional props, which wouldn't be picked up by `toRefs`.\n"
+	},
+
+	"Vue toRefs()": {
+		"prefix": "v:toRefs",
+		"body": [
+			"const ${1:name} = toRefs(${2:source});"
+		],
+		"description": "Reactivity API - Refs.\nConverts a reactive object to a plain object where each property of the resulting object is a `ref` pointing to the corresponding property of the original object.\n`toRefs` is useful when returning a reactive object from a composition function so that the consuming component can destructure/spread the returned object without losing reactivity.\n`toRefs` will only generate refs for properties that are included in the source object. To create a ref for a specific property use toRef instead.\n"
+	},
+
+	"Vue isRef()": {
+		"prefix": "v:isRef",
+		"body": ["isRef(${1:value})"],
+		"description": "Reactivity API - Refs.\nChecks if a value is a ref object.\n"
+	},
+
+	"Vue customRef()": {
+		"prefix": "v:customRef",
+		"body": [
+			"function use${1:Feature}Ref(value) {",
+			"  return customRef((track, trigger) => {",
+			"    return {",
+			"      get() {",
+			"        track();",
+			"        return value;",
+			"      },",
+			"      set(newValue) {",
+			"        trigger();",
+			"      },",
+			"    };",
+			"  });",
+			"}"
+		],
+		"description": "Reactivity API - Refs.\nCreates a customized ref with explicit control over its dependency tracking and updates triggering. It expects a factory function, which receives `track` and `trigger` functions as arguments and should return an object with `get` and `set`.\n"
+	},
+
+	"Vue shallowRef()": {
+		"prefix": "v:shallowRef",
+		"body": [
+			"const ${1:name} = shallowRef({})"
+		],
+		"description": "Reactivity API - Refs.\nCreates a ref that tracks its own `.value` mutation but doesn't make its value reactive.\n"
+	},
+
+	"Vue triggerRef()": {
+		"prefix": "v:triggerRef",
+		"body": ["triggerRef(${1:name});"],
+		"description": "Reactivity API - Refs.\nExecute any effects tied to a `shallowRef` manually.\n"
+	},
+
+	"Vue computed()": {
+		"prefix": "v:computed",
+		"body": [
+			"const ${1:name} = computed(() => $2);"
+		],
+		"description": "Reactivity API - Computed and watch.\nTakes a getter function and returns an immutable reactive ref object for the returned value from the getter.\n"
+	},
+
+	"Vue computed, (get/set)": {
+		"prefix": "v:computedGetSet",
+		"body": [
+			"const ${1:name} = computed({",
+			"\tget: () => ${2},",
+			"\tset: (_value) => {",
+			"\t\t${3}",
+			"\t},",
+			"});"
+		],
+		"description": "Reactivity API - Computed and watch.\nTake an object with `get` and `set` functions to create a writable ref object.\n"
+	},
+
+	"Vue watchEffect()": {
+		"prefix": "v:watchEffect",
+		"body": ["watchEffect(() => {", "  $0", "});"],
+		"description": "Reactivity API - Computed and watch.\nRuns a function immediately while reactively tracking its dependencies and re-runs it whenever the dependencies are changed.\n"
+	},
+
+  "Vue watch inline": {
+		"prefix": "v:watch:inline",
+		"body": [
+			"watch(${1:source}, ${2:functionName});"
+		],
+		"description": "Reactivity API - Computed and watch.\nThe watch API is the exact equivalent of the Options API `this.$watch` (and the corresponding `watch` option). watch requires watching a specific data source and applies side effects in a separate callback function. It also is lazy by default - i.e. the callback is only called when the watched source has changed.\nCompared to `watchEffect`, watch allows us to:\n- Perform the side effect lazily;\n- Be more specific about what state should trigger the watcher to re-run;\n- Access both the previous and current value of the watched state.\n"
+	},
+
+	"Vue watch source": {
+		"prefix": "v:watch",
+		"body": [
+			"watch(${1:source}, (_val) => {",
+			"\t$2",
+			"});"
+		],
+		"description": "Reactivity API - Computed and watch.\nThe watch API is the exact equivalent of the Options API `this.$watch` (and the corresponding `watch` option). watch requires watching a specific data source and applies side effects in a separate callback function. It also is lazy by default - i.e. the callback is only called when the watched source has changed.\nCompared to `watchEffect`, watch allows us to:\n- Perform the side effect lazily;\n- Be more specific about what state should trigger the watcher to re-run;\n- Access both the previous and current value of the watched state.\n"
+	},
+
+	"Vue watch cb": {
+		"prefix": "v:watch:cb",
+		"body": [
+			"watch(",
+			"\t() => ${1:source},",
+			"\t(_val) => {",
+			"\t\t$2",
+			"\t}",
+			");"
+		],
+		"description": "Reactivity API - Computed and watch.\nThe watch API is the exact equivalent of the Options API `this.$watch` (and the corresponding `watch` option). watch requires watching a specific data source and applies side effects in a separate callback function. It also is lazy by default - i.e. the callback is only called when the watched source has changed.\nCompared to `watchEffect`, watch allows us to:\n- Perform the side effect lazily;\n- Be more specific about what state should trigger the watcher to re-run;\n- Access both the previous and current value of the watched state.\n"
+	}
+}

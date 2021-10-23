@@ -1,0 +1,91 @@
+{
+  "Vue lifecycle before mount": {
+		"prefix": "v:onBeforeMount",
+		"body": [
+      "onBeforeMount(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle before mount"
+	},
+
+	"Vue lifecycle mounted": {
+		"prefix": "v:onMounted",
+		"body": [
+      "onMounted(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle mounted"
+	},
+
+	"Vue lifecycle before update": {
+		"prefix": "v:onBeforeUpdate",
+		"body": [
+      "onBeforeUpdate(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle before update"
+	},
+
+  "Vue lifecycle updated": {
+		"prefix": "v:onUpdated",
+		"body": [
+      "onUpdated(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle updated"
+	},
+	
+  "Vue lifecycle before unmount": {
+		"prefix": "v:onBeforeUnmount",
+		"body": [
+      "onBeforeUnmount(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle before unmount"
+	},
+
+  "Vue lifecycle unmounted": {
+		"prefix": "v:onUnmounted",
+		"body": [
+      "onUnmounted(() => {",
+      "\t$1",
+      "});$0"
+    ],
+		"description": "Vue lifecycle unmounted"
+	},
+  
+	"Vue lifecycle error captured": {
+		"prefix": "v:onErrorCaptured",
+		"body": [
+			"onErrorCaptured((err, instance, info) => {",
+			"\t$1",
+			"});$0"
+		],
+		"description": "Vue lifecycle error captured"
+	},
+
+	"Vue lifecycle render tracked": {
+		"prefix": "v:onRenderTracked",
+		"body": [
+			"onRenderTracked((event) => {",
+			"\t$1",
+			"});$0"
+		],
+		"description": "Vue lifecycle render tracked"
+	},
+
+	"Vue lifecycle render triggered": {
+		"prefix": "v:onRenderTriggered",
+		"body": [
+			"onRenderTriggered((event) => {",
+			"\t$1",
+			"});$0"
+		],
+		"description": "Vue lifecycle render triggered"
+	}
+}

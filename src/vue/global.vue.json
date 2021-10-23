@@ -1,0 +1,39 @@
+{
+	"Vue virtual node": {
+		"prefix": "v:h",
+		"body": [
+			"h(${1:type:String|Object|Function}, ${2:props:Object}, ${3:children:String|Array|Object});"
+		],
+		"description": "Vue virtual node"
+	},
+
+  "Vue define component": {
+		"prefix": "v:defineComponent",
+		"body": [
+			"const ${1:FeatureComponent} = defineComponent({",
+			"\t$0",
+			"});"
+		],
+		"description": "Vue define component"
+	},
+
+	"Vue define async component": {
+		"prefix": "v:defineAsyncComponent",
+		"body": [
+			"const ${1:name} = defineAsyncComponent(() => import('${2:path}'));"
+		],
+		"description": "Vue define async component"
+	},
+
+  "Vue nextTick": {
+		"prefix": "v:nextTick",
+		"body": ["nextTick(() => {", "  $0", "});"],
+		"description": "Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.\n"
+	},
+
+	"Vue await nextTick": {
+		"prefix": "v:nextTick:await",
+		"body": ["await nextTick();"],
+		"description": "Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.\n"
+	}
+}
