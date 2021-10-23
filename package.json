@@ -1,0 +1,20 @@
+{
+    "name": "nuxt-vscode-snippets",
+    "displayName": "nuxt-vscode-snippets",
+    "description": "All in one snippet for nuxt projects",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "vue",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
