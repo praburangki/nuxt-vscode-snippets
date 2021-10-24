@@ -1,0 +1,46 @@
+{
+    "Vue SFC Setup": {
+        "prefix": "v:base",
+        "body": [
+            "<script lang=\"ts\"${1| setup,​|}>",
+            "",
+            "</script>",
+            "",
+            "<template>",
+            "\t$2",
+            "</template>",
+            ""
+        ],
+        "description": "Vue SFC with setup syntax"
+    },
+    "Vue SFC script setup": {
+        "prefix": "v:base:script",
+        "body": [
+            "<script lang=\"ts\" setup>",
+            "\t$1",
+            "</script>",
+            ""
+        ],
+        "description": "Vue script setup"
+    },
+    "Vue SFC style lang postcss": {
+        "prefix": "v:base:style",
+        "body": [
+            "<style lang=\"postcss\"${1| scoped,​|}>",
+            "\t$2",
+            "</style>",
+            ""
+        ],
+        "description": "Vue style"
+    },
+    "Vue SFC Template": {
+        "prefix": "v:base:template",
+        "body": [
+            "<template>",
+            "\t$1",
+            "</template>",
+            ""
+        ],
+        "description": "Vue template"
+    }
+}

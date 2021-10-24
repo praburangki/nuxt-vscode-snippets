@@ -1,0 +1,138 @@
+{
+    "array:methods": {
+        "prefix": "arr:methods",
+        "body": [
+            "${1:array}.${2|map,filter,find,findIndex,every,some|}((${3:element},${4|​, index|}) => {",
+            "\t$0",
+            "});"
+        ],
+        "description": "Array methods"
+    },
+    "array:reduce": {
+        "prefix": "arr:reduce",
+        "body": [
+            "${1:array}.reduce((${2:prev}, ${3:current}) => {",
+            "\t$0",
+            "}, ${4:{}});"
+        ],
+        "description": "Array reduce method"
+    },
+    "exportNamedVariable": {
+        "prefix": "env",
+        "body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+        "description": "Export named variable in ES6 syntax"
+    },
+    "function": {
+        "prefix": "fun",
+        "body": [
+            "${1|async ,​|}function ${2:name}(${3:params}:${4:type}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Creates a function"
+    },
+    "function:export": {
+        "prefix": "fun:export",
+        "body": [
+            "export function ${1:name}(${2:params}:${3:type}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Export named function in ES6 syntax"
+    },
+    "iife": {
+        "prefix": "iife",
+        "body": [
+            "(${1|​,async |}() => {",
+            "\t$0",
+            "})()"
+        ],
+        "description": "Immediately Invoked Function Expression"
+    },
+    "variables:const": {
+        "prefix": "cons",
+        "body": [
+            "const ${1:name} = ${2:value}"
+        ],
+        "description": "Define a const variable"
+    },
+    "variables:const:type": {
+        "prefix": "cons:type",
+        "body": [
+            "const ${1:name}:${2:type} = ${3:value}"
+        ],
+        "description": "Define a const variable with types"
+    },
+    "variables:let:type": {
+        "prefix": "let:type",
+        "body": [
+            "let ${1:name}:${2:type} = ${3:value}"
+        ],
+        "description": "Define a let variable with types"
+    },
+    "destructingObject": {
+        "prefix": "dob",
+        "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+        "description": "Creates and assigns a local variable using object destructing"
+    },
+    "destructingArray": {
+        "prefix": "dar",
+        "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+        "description": "Creates and assigns a local variable using array destructing"
+    },
+    "setInterval": {
+        "prefix": "sti",
+        "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+        "description": "Executes the given function at specified intervals in ES6 syntax"
+    },
+    "setTimeOut": {
+        "prefix": "sto",
+        "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+        "description": "Executes the given function after the specified delay in ES6 syntax"
+    },
+    "thenCatch": {
+        "prefix": "thenc",
+        "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+        "description": "Add the .then and .catch methods to handle promises"
+    },
+    "import": {
+        "prefix": "imp",
+        "body": "import ${2:moduleName} from '${1:module}';$0",
+        "description": "Imports entire module statement in ES6 syntax"
+    },
+    "importNoModuleName": {
+        "prefix": "imn",
+        "body": "import '${1:module}';$0",
+        "description": "Imports entire module in ES6 syntax without module name"
+    },
+    "importDestructing": {
+        "prefix": "imd",
+        "body": "import { $2 } from '${1:module}';$0",
+        "description": "Imports only a portion of the module in ES6 syntax"
+    },
+    "importEverything": {
+        "prefix": "ime",
+        "body": "import * as ${2:alias} from '${1:module}';$0",
+        "description": "Imports everything as alias from the module in ES6 syntax"
+    },
+    "importAs": {
+        "prefix": "ima",
+        "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+        "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+    },
+    "require": {
+        "prefix": "rqr",
+        "body": "require('${1:package}');",
+        "description": "Require a package"
+    },
+    "requireToConst": {
+        "prefix": "req",
+        "body": "const ${1:packageName} = require('${1:package}');$0",
+        "description": "Require a package to const"
+    },
+    "moduleExports": {
+        "prefix": "mde",
+        "body": "module.exports = {\n\t$0\n};\n",
+        "description": "Module exports from Common JS, node syntax at ES6"
+    }
+}

@@ -11,12 +11,20 @@
 		"type": "git",
 		"url": "https://github.com/praburangki/nuxt-vscode-snippets.git"
 	},
+	"scripts": {
+		"prebuild": "node merge.js",
+		"build": "vsce package",
+		"prepublish": "npm run build",
+		"publish": "vsce publish"
+	},
 	"keywords": [
+		"Snippet",
+		"Snippets",
 		"Vue",
 		"Vue 3",
-		"Nuxt",
-		"Vue Snippets",
-		"Nuxt Snippets"
+		"Vue3",
+		"Vue Snippet",
+		"Vue Snippets"
 	],
 	"categories": [
 		"Snippets"
@@ -42,7 +50,14 @@
 			{
 				"language": "vue",
 				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
 			}
 		]
+	},
+	"devDependencies": {
+		"glob": "^7.2.0"
 	}
 }
