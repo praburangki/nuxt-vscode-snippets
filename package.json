@@ -1,9 +1,10 @@
 {
 	"name": "nuxt-snippets",
+	"publisher": "praburangki",
 	"displayName": "Nuxt VSCode Snippets",
 	"description": "Snippets for vue/nuxt projects",
 	"icon": "images/logo.png",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
@@ -14,8 +15,8 @@
 	"scripts": {
 		"prebuild": "node merge.js",
 		"build": "vsce package",
-		"prepublish": "npm run build",
-		"publish": "vsce publish"
+		"predeploy": "npm run build",
+		"deploy": "vsce publish"
 	},
 	"keywords": [
 		"Snippet",
