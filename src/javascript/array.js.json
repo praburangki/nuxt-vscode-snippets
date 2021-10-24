@@ -2,7 +2,7 @@
   "array:methods": {
     "prefix": "arr:methods",
     "body": [
-			"${1:array}.${2|map,filter,find,findIndex,every,some|}((${3:element},${4|\u200B, index|}) => {",
+			"${1:array}.${2|map,filter,find,findIndex,every,some|}((${3:element}${4|\u200B, \\, index|}) => {",
 			"\t$0",
 			"});"
 		],
