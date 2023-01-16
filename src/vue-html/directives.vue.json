@@ -73,8 +73,8 @@
     "description": "Create a two-way binding with custom identifier."
   },
 
-  "v-slot": {
-    "prefix": "v:slot",
+  "v-slot-name": {
+    "prefix": "v:slotName",
     "body": ["#${1:slotName}=\"${2}\""],
     "description": "Denote named slots or slots that expect to receive props."
   },

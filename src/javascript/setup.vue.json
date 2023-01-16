@@ -50,6 +50,6 @@
 		"body": [
 			"const attrs = useAttrs();"
 		],
-		"description": "Declare slots within script setup"
+		"description": "Declare attributes within script setup"
 	}
 }

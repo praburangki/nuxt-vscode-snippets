@@ -1,0 +1,30 @@
+{
+  "Nuxt useAppConfig": {
+    "prefix": "v:useAppConfig",
+		"body": [
+      "const ${1:name} = useAppConfig();"
+    ],
+		"description": "Nuxt composable useAppConfig"
+  },
+  "Nuxt useAsyncData": {
+    "prefix": "v:useAsyncData",
+		"body": [
+      "const {${1}} = await useAsyncData(${2});"
+    ],
+		"description": "Nuxt composable useAsyncData"
+  },
+  "Nuxt useCookie": {
+    "prefix": "v:useCookie",
+		"body": [
+      "const ${1:var} = useCookie(${2:name}${3:options})${0};"
+    ],
+		"description": "Nuxt composable useCookie"
+  },
+  "Nuxt useCookie": {
+    "prefix": "v:useError",
+		"body": [
+      "const ${1:var} = useError();"
+    ],
+		"description": "Nuxt composable useError"
+  },
+}

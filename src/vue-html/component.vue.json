@@ -23,16 +23,10 @@
     "description": "enter-from-class=''. Expects: string."
   },
 
-  "transition leave-from-class": {
-    "prefix": "v:leaveFromClass",
-    "body": ["$2leave-from-class=\"$1\"$0"],
-    "description": "leave-from-class=''. Expects: string."
-  },
-
-  "transition appear-class": {
-    "prefix": "v:appearClass",
-    "body": ["$2appear-class=\"$1\"$0"],
-    "description": "appear-class=''. Expects: string."
+  "transition enter-active-class": {
+    "prefix": "v:enterActiveClass",
+    "body": ["$2enter-active-class=\"$1\"$0"],
+    "description": "enter-active-class=''. Expects: string."
   },
 
   "transition enter-to-class": {
@@ -41,10 +35,16 @@
     "description": "enter-to-class=''. Expects: string."
   },
 
-  "transition leave-to-class": {
-    "prefix": "v:leaveToClass",
-    "body": ["$2leave-to-class=\"$1\"$0"],
-    "description": "leave-to-class=''. Expects: string."
+  "transition appear-from-class": {
+    "prefix": "v:appearFromClass",
+    "body": ["$2appear-from-class=\"$1\"$0"],
+    "description": "appear-from-class=''. Expects: string."
+  },
+
+  "transition appear-active-class": {
+    "prefix": "v:appearActiveClass",
+    "body": ["$2appear-active-class=\"$1\"$0"],
+    "description": "appear-active-class=''. Expects: string."
   },
 
   "transition appear-to-class": {
@@ -53,10 +53,10 @@
     "description": "appear-to-class=''. Expects: string."
   },
 
-  "transition enter-active-class": {
-    "prefix": "v:enterActiveClass",
-    "body": ["$2enter-active-class=\"$1\"$0"],
-    "description": "enter-active-class=''. Expects: string."
+  "transition leave-from-class": {
+    "prefix": "v:leaveFromClass",
+    "body": ["$2leave-from-class=\"$1\"$0"],
+    "description": "leave-from-class=''. Expects: string."
   },
 
   "transition leave-active-class": {
@@ -65,10 +65,10 @@
     "description": "leave-active-class=''. Expects: string."
   },
 
-  "transition appear-active-class": {
-    "prefix": "v:appearActiveClass",
-    "body": ["$2appear-active-class=\"$1\"$0"],
-    "description": "appear-active-class=''. Expects: string."
+  "transition leave-to-class": {
+    "prefix": "v:leaveToClass",
+    "body": ["$2leave-to-class=\"$1\"$0"],
+    "description": "leave-to-class=''. Expects: string."
   },
 
   "transition before-enter": {

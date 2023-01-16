@@ -51,6 +51,14 @@
     "description": "Define a const variable with types"
 	},
 
+  "variables:let": {
+		"prefix": "cons",
+		"body": [
+			"let ${1:name} = ${2:value}"
+		],
+    "description": "Define a let variable"
+	},
+
 	"variables:let:type": {
 		"prefix": "let:type",
 		"body": [
