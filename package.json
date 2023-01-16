@@ -5,7 +5,7 @@
 	"description": "Snippets for vue/nuxt projects",
 	"license": "MIT",
 	"icon": "images/logo.png",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
