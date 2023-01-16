@@ -2,12 +2,12 @@
 	"Vue SFC Setup": {
 		"prefix": "v:base",
 		"body": [
-			"<script lang=\"ts\"${1| setup,\u200B|}>",
+			"<script lang=\"ts\" setup>",
 			"",
 			"</script>",
 			"",
 			"<template>",
-			"\t$2",
+			"\t$0",
 			"</template>",
 			""
 		],
@@ -17,7 +17,7 @@
 		"prefix": "v:base:script",
 		"body": [
 			"<script lang=\"ts\" setup>",
-			"\t$1",
+			"\t$0",
 			"</script>",
 			""
 		],
@@ -26,8 +26,8 @@
 	"Vue SFC style lang postcss": {
 		"prefix": "v:base:style",
 		"body": [
-			"<style lang=\"postcss\"${1| scoped,\u200B|}>",
-			"\t$2",
+			"<style lang=\"postcss\" scoped>",
+			"\t$0",
 			"</style>",
 			""
 		],
@@ -37,7 +37,7 @@
 		"prefix": "v:base:template",
 		"body": [
 			"<template>",
-			"\t$1",
+			"\t$0",
 			"</template>",
 			""
 		],

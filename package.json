@@ -1,8 +1,9 @@
 {
 	"name": "nuxt-snippets",
 	"publisher": "praburangki",
-	"displayName": "Nuxt VSCode Snippets",
+	"displayName": "Vue Snippets",
 	"description": "Snippets for vue/nuxt projects",
+	"license": "MIT",
 	"icon": "images/logo.png",
 	"version": "1.2.0",
 	"engines": {
@@ -15,17 +16,20 @@
 	"scripts": {
 		"prebuild": "node merge.js",
 		"build": "vsce package",
-		"predeploy": "npm run build",
-		"deploy": "vsce publish"
+		"predeploy": "pnpm run build",
+		"deploy": "vsce publish",
+		"deploy:patch": "vsce publish patch",
+		"deploy:minor": "vsce publish minor"
 	},
 	"keywords": [
-		"Snippet",
-		"Snippets",
-		"Vue",
-		"Vue 3",
-		"Vue3",
-		"Vue Snippet",
-		"Vue Snippets"
+		"snippet",
+		"snippets",
+		"vue",
+		"vue 3",
+		"vue3",
+		"vue Snippet",
+		"vue Snippets",
+		"nuxt"
 	],
 	"categories": [
 		"Snippets"
@@ -59,6 +63,7 @@
 		]
 	},
 	"devDependencies": {
+		"@vscode/vsce": "^2.16.0",
 		"glob": "^7.2.0"
 	}
 }
