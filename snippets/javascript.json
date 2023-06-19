@@ -517,5 +517,24 @@
             "const attrs = useAttrs();"
         ],
         "description": "Declare slots within script setup"
+    },
+    "Nuxt head meta config": {
+        "prefix": "n:meta",
+        "body": [
+            "app: {",
+            "    head: {",
+            "        htmlAttrs: {",
+            "            lang: \"en\"",
+            "        },",
+            "        charset: 'utf-8',",
+            "        viewport: 'width=device-width, initial-scale=1',",
+            "        title: '${1:title}',",
+            "        meta: [",
+            "            { name: 'description', content: '${2:description}' }",
+            "        ],",
+            "    }",
+            "}"
+        ],
+        "description": "Head metadata configuration for nuxt.config.ts"
     }
 }
