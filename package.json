@@ -1,69 +1,121 @@
 {
-	"name": "nuxt-snippets",
-	"publisher": "praburangki",
-	"displayName": "Vue Snippets",
-	"description": "Snippets for vue/nuxt projects",
-	"license": "MIT",
-	"icon": "images/logo.png",
-	"version": "1.3.0",
-	"engines": {
-		"vscode": "^1.61.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/praburangki/nuxt-vscode-snippets.git"
-	},
-	"scripts": {
-		"prebuild": "node merge.js",
-		"build": "vsce package",
-		"predeploy": "pnpm run build",
-		"deploy": "vsce publish",
-		"deploy:patch": "vsce publish patch",
-		"deploy:minor": "vsce publish minor"
-	},
-	"keywords": [
-		"snippet",
-		"snippets",
-		"vue",
-		"vue 3",
-		"vue3",
-		"vue Snippet",
-		"vue Snippets",
-		"nuxt"
-	],
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "javascriptreact",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "typescriptreact",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/vue.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/html.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"@vscode/vsce": "^2.16.0",
-		"glob": "^7.2.0"
-	}
+  "publisher": "praburangki",
+  "name": "nuxt-snippets",
+  "displayName": "Vue & Nuxt Snippets",
+  "type": "module",
+  "version": "1.4.0",
+  "description": "Snippets for vue/nuxt projects",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/praburangki/nuxt-vscode-snippets.git"
+  },
+  "keywords": [
+    "snippet",
+    "snippets",
+    "vue",
+    "vue 3",
+    "vue3",
+    "vue Snippet",
+    "vue Snippets",
+    "nuxt"
+  ],
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "images/logo.png",
+  "engines": {
+    "vscode": "^1.x.x"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "vue",
+        "path": "./dist/vue.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./dist/vue-template.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/vue-script.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/vue-script.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/vue-script.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/vue-script.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/vue-router-script.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/vue-router-script.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/vue-router-script.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/vue-router-script.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/vue-router-script.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/pinia.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/pinia.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/pinia.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/pinia.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/nuxt-script.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/nuxt-script.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./dist/nuxt-script.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./dist/nuxt-script.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./dist/nuxt-template.code-snippets"
+      },
+      {
+        "language": "html",
+        "path": "./dist/vue-router-template.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vinicunca/eslint-config": "^2.4.4"
+  }
 }
