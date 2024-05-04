@@ -3,7 +3,7 @@
   "name": "nuxt-snippets",
   "displayName": "Vue & Nuxt Snippets",
   "type": "module",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Snippets for vue/nuxt projects",
   "license": "MIT",
   "repository": {
