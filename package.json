@@ -116,11 +116,8 @@
     ]
   },
   "scripts": {
-    "build": "vsce package",
-    "predeploy": "pnpm run build",
-    "deploy": "vsce publish",
-    "deploy:patch": "vsce publish patch",
-    "deploy:minor": "vsce publish minor"
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@vscode/vsce": "^2.16.0"
