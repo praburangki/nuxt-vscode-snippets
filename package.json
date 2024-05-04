@@ -115,7 +115,15 @@
       }
     ]
   },
+  "scripts": {
+    "build": "vsce package",
+    "predeploy": "pnpm run build",
+    "deploy": "vsce publish",
+    "deploy:patch": "vsce publish patch",
+    "deploy:minor": "vsce publish minor"
+  },
   "devDependencies": {
-    "@vinicunca/eslint-config": "^2.4.4"
+    "@vinicunca/eslint-config": "^2.4.4",
+    "@vscode/vsce": "^2.16.0"
   }
 }
