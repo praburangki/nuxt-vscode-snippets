@@ -3,7 +3,7 @@
   "name": "nuxt-snippets",
   "displayName": "Vue & Nuxt Snippets",
   "type": "module",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Snippets for vue/nuxt projects",
   "license": "MIT",
   "repository": {
@@ -36,6 +36,14 @@
       {
         "language": "html",
         "path": "./dist/vue-template.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./dist/javascript.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/javascript.code-snippets"
       },
       {
         "language": "javascript",
@@ -120,6 +128,6 @@
     "publish": "vsce publish --no-dependencies"
   },
   "devDependencies": {
-    "@vscode/vsce": "^2.16.0"
+    "@vscode/vsce": "^3.1.0"
   }
 }
