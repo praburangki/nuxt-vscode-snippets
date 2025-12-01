@@ -9,7 +9,7 @@ export const codeSnippets: VSnippetDefinition = {
     'v:composable': {
       name: 'Vue define composable',
       body: [
-        'export function use${1/(.*)/${1:/pascalcase}/}() {',
+        'export function use${1/(.*)/${1:/kebabcase}/}() {',
         '\t$0',
         '\t',
         '\treturn {',
@@ -22,7 +22,7 @@ export const codeSnippets: VSnippetDefinition = {
     'v:composable:file': {
       name: 'Vue define composable in file',
       body: [
-        'export function ${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}() {',
+        'export function ${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}() {',
         '\t$0',
         '\t',
         '\treturn {',

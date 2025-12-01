@@ -10,7 +10,7 @@ export const script: VSnippetDefinition = {
       body: [
         'import { defineStore } from \'pinia\'',
         '',
-        'export const use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store = defineStore(\'$TM_FILENAME_BASE\', () => {',
+        'export const use${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}Store = defineStore(\'$TM_FILENAME_BASE\', () => {',
         '\t$0',
         '\t',
         '\treturn {',
@@ -25,7 +25,7 @@ export const script: VSnippetDefinition = {
       body: [
         'import { defineStore } from \'pinia\'',
         '',
-        'export const use${TM_FILENAME_BASE/^(.*)$/${1:/pascalcase}/}Store = defineStore(\'$TM_FILENAME_BASE\', {',
+        'export const use${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}Store = defineStore(\'$TM_FILENAME_BASE\', {',
         ' state: () => ({',
         '   $0',
         ' }),',

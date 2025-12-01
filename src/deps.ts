@@ -1,6 +1,6 @@
 import type * as _replace from 'npm:replace-in-file';
 
-import replace from 'npm:replace-in-file';
+import { replaceInFile as replace } from 'npm:replace-in-file';
 
 export { ensureDirSync } from 'https://deno.land/std@0.141.0/fs/ensure_dir.ts';
 export { parse } from 'https://deno.land/std@0.168.0/flags/mod.ts';
