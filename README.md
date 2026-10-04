@@ -1726,7 +1726,7 @@ Useful vue snippets and helpers
 <td>
 
 ```javascript
-export function use${1/(.*)/${1:/kebabcase}/}() {
+export function use${1/(.*)/${1:/camelcase}/}() {
   $0
   
   return {
@@ -1745,7 +1745,7 @@ export function use${1/(.*)/${1:/kebabcase}/}() {
 <td>
 
 ```javascript
-export function ${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}() {
+export function ${TM_FILENAME_BASE/^(.*)$/${1:/camelcase}/}() {
   $0
   
   return {
@@ -2542,7 +2542,7 @@ setCookie(event, '${1:cookie}', ${2:value})
 ```javascript
 import { defineStore } from 'pinia'
 
-export const use${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}Store = defineStore('$TM_FILENAME_BASE', () => {
+export const use${TM_FILENAME_BASE/^(.*)$/${1:/camelcase}/}Store = defineStore('$TM_FILENAME_BASE', () => {
   $0
   
   return {
@@ -2563,7 +2563,7 @@ export const use${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}Store = defineStore('
 ```javascript
 import { defineStore } from 'pinia'
 
-export const use${TM_FILENAME_BASE/^(.*)$/${1:/kebabcase}/}Store = defineStore('$TM_FILENAME_BASE', {
+export const use${TM_FILENAME_BASE/^(.*)$/${1:/camelcase}/}Store = defineStore('$TM_FILENAME_BASE', {
  state: () => ({
    $0
  }),
